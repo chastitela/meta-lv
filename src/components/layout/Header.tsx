@@ -14,12 +14,11 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full border-b border-gray-200 sticky top-0 bg-white z-50">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold tracking-tight text-accent">
+    <header className="w-full border-b border-border bg-white sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <Link href="/" className="text-xl font-bold text-accent tracking-tight">
           METASAPIENS
         </Link>
-
         <nav className="flex gap-6 text-sm font-medium">
           {nav.map(({ href, label }) => (
             <Link
@@ -28,7 +27,7 @@ export default function Header() {
               className={`transition ${
                 pathname === href
                   ? "text-accent"
-                  : "text-gray-500 hover:text-black"
+                  : "text-muted hover:text-black"
               }`}
             >
               {label}
